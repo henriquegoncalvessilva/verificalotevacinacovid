@@ -6,18 +6,6 @@
     <title>Unity WebGL Player | Verifica Lote Covid  - Desenvolvido por Henrique Gonçalves</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-	
-	<script type='text/javascript'>
-    document.addEventListener('click', function(e) {
-        if (e.target.id == "canvas") {
-            // Clicked on canvas
-            FocusCanvas("1");
-        } else {
-            // Clicked outside of canvas
-            FocusCanvas("0");
-        }
-    });
-</script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -93,21 +81,7 @@
           alert(message);
         });
       };
-	  var gameReady = false;
-
-// Called by Unity in GameControl's start function
-function GameControlReady () {
-    gameReady = true;
-}
-
-function FocusCanvas(focus) {
-    if (gameReady) {
-        SendMessage("GameControl", "FocusCanvas", focus);
-    }
-}
       document.body.appendChild(script);
-	  
-	  
     </script>
   </body>
 </html>
