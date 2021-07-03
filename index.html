@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | VerificaLoteCovid</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=414 height=896 style="width: 414px; height: 896px; background: #231F20"></canvas>
+    <script src="Build/WEBGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WEBGL.data.br",
+        frameworkUrl: "Build/WEBGL.framework.js.br",
+        codeUrl: "Build/WEBGL.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "HenriqueGonçalves",
+        productName: "VerificaLoteCovid",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
